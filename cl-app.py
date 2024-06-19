@@ -1,4 +1,5 @@
 import os
+from dotenv import load_dotenv
 import streamlit as st
 import vertexai
 from vertexai.generative_models import (
@@ -8,6 +9,8 @@ from vertexai.generative_models import (
     HarmCategory,
 )
 import pyperclip
+
+load_dotenv()
 
 # Initialize Vertex AI
 PROJECT_ID = os.getenv("GCP_PROJECT")  # Your Google Cloud Project ID
